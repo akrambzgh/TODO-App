@@ -1,0 +1,149 @@
+// Header
+.image {
+    position: relative;
+    background-image: url("/images/bg-mobile-light.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    @include largeScreen() {
+        .container {
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+    .title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 0 0 0;
+        .text {
+            h1 {
+                color: $White;
+                font-size: 2rem;
+                letter-spacing: 0.7rem;
+                text-transform: uppercase;
+                font-weight: 600;
+            }
+        }
+        .icon {
+            button {
+                cursor: pointer;
+                background: none;
+                border: 0;
+            }
+        }
+    }
+}
+
+// Form
+.form {
+    .create-task {
+        padding: 15px;
+        position: absolute;
+        top: 35%;
+        background-color: $White;
+        width: 375px;
+        @include largeScreen() {
+            & {
+                width: 700px;
+            }
+        }
+        border-radius: 7px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        button.add-btn {
+            width: 30px;
+            height: 30px;
+            border: 1px solid $DarkGrayishBlue;
+            border-radius: 50%;
+            background: 0;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        input.task-input {
+            flex: 1;
+            border: 0;
+            font-size: 18px;
+            color: $VeryDarkGrayishBlue;
+            caret-color: $BrightBlue;
+            &::placeholder {
+                color: $DarkGrayishBlue;
+                font-weight: 700;
+            }
+        }
+    }
+}
+
+.tasks {
+    position: absolute;
+    top: 25%;
+    left: 20px;
+    @include largeScreen() {
+        & {
+            top: 30%;
+            left: -36px;
+        }
+    }
+    padding: 20px 0;
+    .tasks-list {
+        background-color: $White;
+        border-radius: 10px;
+        box-shadow: 0px 10px 100px 0px $DarkGrayishBlue;
+        overflow: hidden;
+        @include largeScreen() {
+            & {
+                width: 700px;
+                margin: 0 auto;
+            }
+        }
+        .task {
+            padding: 15px;
+            border-top: 1px solid $DarkGrayishBlue;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            cursor: pointer;
+            li.task-text {
+                font-size: 22px;
+                font-weight: 300;
+                flex: 1;
+                &.completed {
+                    opacity: 0.4;
+                    text-decoration: line-through;
+                }
+            }
+            button.complete {
+                width: 30px;
+                height: 30px;
+                border: 1px solid $DarkGrayishBlue;
+                border-radius: 50%;
+                background: 0;
+                margin-right: 15px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                &:hover {
+                    border: 1px solid linear-gradient(-45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                }
+                &.checked {
+                    background: linear-gradient(-45deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+                    border: 0;
+                    img {
+                        pointer-events: none;
+                        width: 15px;
+                        height: 15px;
+                    }
+                }
+            }
+            button.delete {
+                background: 0;
+                border: 0;
+                cursor: pointer;
+            }
+        }
+    }
+}

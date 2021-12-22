@@ -1,0 +1,17 @@
+@media (max-width: 767px) {
+    .container {
+        width: 375px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 1440px;
+    }
+}
+
+@mixin largeScreen() {
+    @media (min-width: 992px) {
+        @content
+    }
+}

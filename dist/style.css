@@ -16,6 +16,13 @@ body {
   font-family: "Josefin Sans", sans-serif;
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 h1,
@@ -35,6 +42,163 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+input:focus,
+button:focus {
+  outline: none;
+}
+
+@media (max-width: 767px) {
+  .container {
+    width: 375px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1440px;
+  }
+}
+.image {
+  position: relative;
+  background-image: url("/images/bg-mobile-light.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 300px;
+}
+@media (min-width: 992px) {
+  .image .container {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+.image .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 0 0;
+}
+.image .title .text h1 {
+  color: white;
+  font-size: 2rem;
+  letter-spacing: 0.7rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.image .title .icon button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+.form .create-task {
+  padding: 15px;
+  position: absolute;
+  top: 35%;
+  background-color: white;
+  width: 375px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  .form .create-task {
+    width: 700px;
+  }
+}
+.form .create-task button.add-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #777a92;
+  border-radius: 50%;
+  background: 0;
+  margin-right: 15px;
+  cursor: pointer;
+}
+.form .create-task input.task-input {
+  flex: 1;
+  border: 0;
+  font-size: 18px;
+  color: #393a4c;
+  caret-color: #3a7bfd;
+}
+.form .create-task input.task-input::placeholder {
+  color: #777a92;
+  font-weight: 700;
+}
+
+.tasks {
+  position: absolute;
+  top: 25%;
+  left: 20px;
+  padding: 20px 0;
+}
+@media (min-width: 992px) {
+  .tasks {
+    top: 30%;
+    left: -36px;
+  }
+}
+.tasks .tasks-list {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 10px 100px 0px #777a92;
+  overflow: hidden;
+}
+@media (min-width: 992px) {
+  .tasks .tasks-list {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+.tasks .tasks-list .task {
+  padding: 15px;
+  border-top: 1px solid #777a92;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+}
+.tasks .tasks-list .task li.task-text {
+  font-size: 22px;
+  font-weight: 300;
+  flex: 1;
+}
+.tasks .tasks-list .task li.task-text.completed {
+  opacity: 0.4;
+  text-decoration: line-through;
+}
+.tasks .tasks-list .task button.complete {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #777a92;
+  border-radius: 50%;
+  background: 0;
+  margin-right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.tasks .tasks-list .task button.complete:hover {
+  border: 1px solid linear-gradient(-45deg, #57ddff, #c058f3);
+}
+.tasks .tasks-list .task button.complete.checked {
+  background: linear-gradient(-45deg, #57ddff, #c058f3);
+  border: 0;
+}
+.tasks .tasks-list .task button.complete.checked img {
+  pointer-events: none;
+  width: 15px;
+  height: 15px;
+}
+.tasks .tasks-list .task button.delete {
+  background: 0;
+  border: 0;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

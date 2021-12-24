@@ -2,6 +2,9 @@
 .image {
     position: relative;
     background-image: url("/images/bg-mobile-light.jpg");
+    @include largeScreen() {
+        background-image: url("/images/bg-desktop-light.jpg");
+    }
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -49,6 +52,11 @@
                 width: 700px;
             }
         }
+        @include mediumScreen() {
+            & {
+                width: 750px;
+            }
+        }
         border-radius: 7px;
         display: flex;
         justify-content: flex-start;
@@ -68,9 +76,12 @@
             font-size: 18px;
             color: $VeryDarkGrayishBlue;
             caret-color: $BrightBlue;
+            font-family: 'Josefin Sans',
+            sans-serif;
             &::placeholder {
                 color: $DarkGrayishBlue;
-                font-weight: 700;
+                font-family: 'Josefin Sans',
+                sans-serif;
             }
         }
     }
@@ -79,18 +90,19 @@
 .tasks {
     position: absolute;
     top: 25%;
-    left: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     @include largeScreen() {
         & {
             top: 30%;
-            left: -36px;
         }
     }
     padding: 20px 0;
     .tasks-list {
         background-color: $White;
-        border-radius: 10px;
-        box-shadow: 0px 10px 100px 0px $DarkGrayishBlue;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 10px 10px 100px 0px $DarkGrayishBlue;
         overflow: hidden;
         @include largeScreen() {
             & {
@@ -145,5 +157,38 @@
                 cursor: pointer;
             }
         }
+    }
+    .details-delete-all {
+        text-align: center;
+        padding: 15px;
+        background-color: $White;
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        border-top: 1px solid $DarkGrayishBlue;
+        @include largeScreen() {
+            width: 700px;
+            margin: 0 auto;
+        }
+        .delete-all {
+            background: 0;
+            border: 0;
+            cursor: pointer;
+            color: $DarkGrayishBlue;
+            font-size: 18px;
+            font-family: 'Josefin Sans',
+            sans-serif;
+        }
+    }
+}
+
+p.record {
+    color: DarkGrayishBlue;
+    width: 100%;
+    text-align: center;
+    @include largeScreen() {
+        display: none;
+    }
+    @include mediumScreen() {
+        display: none;
     }
 }

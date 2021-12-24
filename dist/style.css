@@ -59,6 +59,11 @@ button:focus {
     width: 1440px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: 750px;
+  }
+}
 .image {
   position: relative;
   background-image: url("/images/bg-mobile-light.jpg");
@@ -66,6 +71,11 @@ button:focus {
   background-size: cover;
   background-position: center center;
   height: 300px;
+}
+@media (min-width: 992px) {
+  .image {
+    background-image: url("/images/bg-desktop-light.jpg");
+  }
 }
 @media (min-width: 992px) {
   .image .container {
@@ -108,6 +118,11 @@ button:focus {
     width: 700px;
   }
 }
+@media (min-width: 768px) and (max-width: 991px) {
+  .form .create-task {
+    width: 750px;
+  }
+}
 .form .create-task button.add-btn {
   width: 30px;
   height: 30px;
@@ -123,28 +138,30 @@ button:focus {
   font-size: 18px;
   color: #393a4c;
   caret-color: #3a7bfd;
+  font-family: "Josefin Sans", sans-serif;
 }
 .form .create-task input.task-input::placeholder {
   color: #777a92;
-  font-weight: 700;
+  font-family: "Josefin Sans", sans-serif;
 }
 
 .tasks {
   position: absolute;
   top: 25%;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 20px 0;
 }
 @media (min-width: 992px) {
   .tasks {
     top: 30%;
-    left: -36px;
   }
 }
 .tasks .tasks-list {
   background-color: white;
-  border-radius: 10px;
-  box-shadow: 0px 10px 100px 0px #777a92;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 10px 10px 100px 0px #777a92;
   overflow: hidden;
 }
 @media (min-width: 992px) {
@@ -199,6 +216,44 @@ button:focus {
   background: 0;
   border: 0;
   cursor: pointer;
+}
+.tasks .details-delete-all {
+  text-align: center;
+  padding: 15px;
+  background-color: white;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top: 1px solid #777a92;
+}
+@media (min-width: 992px) {
+  .tasks .details-delete-all {
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+.tasks .details-delete-all .delete-all {
+  background: 0;
+  border: 0;
+  cursor: pointer;
+  color: #777a92;
+  font-size: 18px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+p.record {
+  color: DarkGrayishBlue;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 992px) {
+  p.record {
+    display: none;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  p.record {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

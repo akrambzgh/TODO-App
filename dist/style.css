@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #cacde8;
+}
+
+::-webkit-scrollbar-thumb {
+  width: 100%;
+  height: 40px;
+  background-color: #393a4c;
+  border-radius: 7px;
+}
+
 html {
   font-size: 100%;
   line-height: 1.6;
@@ -18,6 +30,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   overflow-y: scroll;
+  transition: 300ms;
 }
 
 .container {
@@ -65,6 +78,7 @@ button:focus {
   }
 }
 .image {
+  transition: 300ms;
   position: relative;
   background-image: url("/images/bg-mobile-light.jpg");
   background-repeat: no-repeat;
@@ -97,6 +111,7 @@ button:focus {
   font-weight: 600;
 }
 .image .title .icon {
+  transition: 300ms;
   width: 30px;
   height: 30px;
   background-image: url("/images/icon-moon.svg");
@@ -115,6 +130,7 @@ button:focus {
 }
 
 .form .create-task {
+  transition: 300ms;
   padding: 15px;
   position: absolute;
   top: 35%;
@@ -145,6 +161,7 @@ button:focus {
   cursor: pointer;
 }
 .form .create-task input.task-input {
+  transition: 300ms;
   flex: 1;
   border: 0;
   font-size: 18px;
@@ -158,6 +175,7 @@ button:focus {
 }
 
 .tasks {
+  transition: 300ms;
   position: absolute;
   top: 25%;
   left: 50%;
@@ -183,6 +201,7 @@ button:focus {
   }
 }
 .tasks .tasks-list .task {
+  transition: 300ms;
   padding: 15px;
   border-top: 1px solid #777a92;
   display: flex;
@@ -230,6 +249,7 @@ button:focus {
   cursor: pointer;
 }
 .tasks .details-delete-all {
+  transition: 300ms;
   text-align: center;
   padding: 15px;
   background-color: white;
@@ -250,22 +270,6 @@ button:focus {
   color: #777a92;
   font-size: 18px;
   font-family: "Josefin Sans", sans-serif;
-}
-
-p.record {
-  color: DarkGrayishBlue;
-  width: 100%;
-  text-align: center;
-}
-@media (min-width: 992px) {
-  p.record {
-    display: none;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  p.record {
-    display: none;
-  }
 }
 
 body.dark {

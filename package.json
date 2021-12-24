@@ -10,6 +10,7 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "autoprefixer": "^10.4.0",
         "dart-sass": "^1.25.0",
         "sass": "^1.45.1"
     }

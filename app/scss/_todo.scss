@@ -1,5 +1,6 @@
 // Header
 .image {
+    transition: 300ms;
     position: relative;
     background-image: url("/images/bg-mobile-light.jpg");
     @include largeScreen() {
@@ -30,6 +31,7 @@
             }
         }
         .icon {
+            transition: 300ms;
             width: 30px;
             height: 30px;
             background-image: url("/images/icon-moon.svg");
@@ -52,6 +54,7 @@
 // Form
 .form {
     .create-task {
+        transition: 300ms;
         padding: 15px;
         position: absolute;
         top: 35%;
@@ -81,6 +84,7 @@
             cursor: pointer;
         }
         input.task-input {
+            transition: 300ms;
             flex: 1;
             border: 0;
             font-size: 18px;
@@ -97,7 +101,9 @@
     }
 }
 
+// Tasks
 .tasks {
+    transition: 300ms;
     position: absolute;
     top: 25%;
     left: 50%;
@@ -121,6 +127,7 @@
             }
         }
         .task {
+            transition: 300ms;
             padding: 15px;
             border-top: 1px solid $DarkGrayishBlue;
             display: flex;
@@ -169,6 +176,7 @@
         }
     }
     .details-delete-all {
+        transition: 300ms;
         text-align: center;
         padding: 15px;
         background-color: $White;
@@ -188,17 +196,5 @@
             font-family: 'Josefin Sans',
             sans-serif;
         }
-    }
-}
-
-p.record {
-    color: DarkGrayishBlue;
-    width: 100%;
-    text-align: center;
-    @include largeScreen() {
-        display: none;
-    }
-    @include mediumScreen() {
-        display: none;
     }
 }

@@ -1,0 +1,25 @@
+body.dark {
+    background-color: $VeryDarkBlue;
+    .image {
+        background-image: url("/images/bg-mobile-dark.jpg");
+        @include largeScreen() {
+            background-image: url("/images/bg-desktop-dark.jpg");
+        }
+    }
+    .create-task {
+        background-color: $VeryDarkDesaturatedBlue;
+        color: $VeryDarkGrayishBlue;
+        input.task-input {
+            background-color: $VeryDarkDesaturatedBlue;
+            color: $White;
+        }
+    }
+    .tasks-list {
+        background-color: $VeryDarkDesaturatedBlue;
+        color: $LightGrayishBlue;
+        box-shadow: 6px 6px 100px 0px $VeryDarkGrayishBlue;
+    }
+    .details-delete-all {
+        background-color: $VeryDarkDesaturatedBlue;
+    }
+}

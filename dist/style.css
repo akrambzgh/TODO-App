@@ -96,7 +96,19 @@ button:focus {
   text-transform: uppercase;
   font-weight: 600;
 }
-.image .title .icon button {
+.image .title .icon {
+  width: 30px;
+  height: 30px;
+  background-image: url("/images/icon-moon.svg");
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.image .title .icon.dark-icon {
+  background-image: url("/images/icon-sun.svg");
+}
+.image .title .icon button.theme {
   cursor: pointer;
   background: none;
   border: 0;
@@ -254,6 +266,34 @@ p.record {
   p.record {
     display: none;
   }
+}
+
+body.dark {
+  background-color: #161722;
+}
+body.dark .image {
+  background-image: url("/images/bg-mobile-dark.jpg");
+}
+@media (min-width: 992px) {
+  body.dark .image {
+    background-image: url("/images/bg-desktop-dark.jpg");
+  }
+}
+body.dark .create-task {
+  background-color: #25273c;
+  color: #393a4c;
+}
+body.dark .create-task input.task-input {
+  background-color: #25273c;
+  color: white;
+}
+body.dark .tasks-list {
+  background-color: #25273c;
+  color: #cacde8;
+  box-shadow: 6px 6px 100px 0px #393a4c;
+}
+body.dark .details-delete-all {
+  background-color: #25273c;
 }
 
 /*# sourceMappingURL=style.css.map */

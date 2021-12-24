@@ -30,7 +30,17 @@
             }
         }
         .icon {
-            button {
+            width: 30px;
+            height: 30px;
+            background-image: url("/images/icon-moon.svg");
+            background-position: center center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            cursor: pointer;
+            &.dark-icon {
+                background-image: url("/images/icon-sun.svg");
+            }
+            button.theme {
                 cursor: pointer;
                 background: none;
                 border: 0;

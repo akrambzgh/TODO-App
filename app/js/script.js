@@ -4,6 +4,8 @@ let addTaskButton = document.querySelector(".add-btn")
 let tasksList = document.querySelector(".tasks-list");
 let main = document.querySelector(".tasks");
 
+let themeToggle = document.querySelector(".icon");
+
 // Delete All Button
 const deleteAll = document.createElement("button");
 const deleteDetailsDiv = document.createElement("div");
@@ -13,10 +15,14 @@ deleteDetailsDiv.classList.add("details-delete-all");
 deleteAll.classList.add("delete-all");
 // Edit Text Content
 deleteAll.textContent = "Clear Complete";
+
 // Event Listeners
 addTaskButton.addEventListener("click", addTask);
+themeToggle.addEventListener("click", changeTheme);
 
 // Functions
+
+// Make A Task
 function addTask() {
     if (myInput.value.length !== 0) {
         // Create Elemnt
@@ -79,3 +85,9 @@ function addTask() {
         alert("There Are No Tasks");
     };
 };
+
+// Dark Light Theme Toggle
+function changeTheme() {
+    document.body.classList.toggle("dark");
+    themeToggle.classList.toggle("dark-icon");
+}
